@@ -2,17 +2,20 @@
 
 ## 🔌 **Overview**
 
-This directory contains comprehensive API documentation for SafeMate, including endpoint specifications, integration guides, authentication methods, and API usage examples.
+This directory contains comprehensive API documentation for SafeMate, including endpoint 
+specifications, integration guides, authentication methods, and API usage examples.
 
 ## 📚 **Documentation Structure**
 
 ### **📋 [API Reference](reference/)**
+
 - Complete API endpoint documentation
 - Request/response schemas
 - Error codes and messages
 - Rate limiting information
 
 ### **🔐 [Authentication](authentication/)**
+
 - Authentication methods and flows
 - JWT token management
 - API key configuration
