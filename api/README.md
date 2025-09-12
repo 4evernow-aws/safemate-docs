@@ -38,6 +38,7 @@ This directory contains comprehensive API documentation for SafeMate, including 
 - Integration test guides
 
 ### **📈 [Monitoring](monitoring/)**
+
 - API performance metrics
 - Error tracking
 - Usage analytics
