@@ -25,6 +25,7 @@ This directory contains comprehensive API documentation for SafeMate, including 
 - Integration examples
 
 ### **📊 [Examples](examples/)**
+
 - Code examples in multiple languages
 - Common use cases
 - Best practices
@@ -47,6 +48,7 @@ This directory contains comprehensive API documentation for SafeMate, including 
 ## 🏗️ **API Architecture**
 
 ### **REST API Structure**
+
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Client        │    │   API Gateway   │    │   Lambda        │
