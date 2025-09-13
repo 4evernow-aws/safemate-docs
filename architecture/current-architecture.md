@@ -97,15 +97,22 @@ Amazon Cognito
 ### **⚠️ Required Paid Services (Minimal)**
 ```
 AWS KMS (Key Management Service)
-├── Encryption Keys
+├── Encryption Keys for DynamoDB
+├── Hedera Private Key Encryption
 └── Cost: ~$1/month
-
-AWS Secrets Manager
-├── Hedera Private Keys
-└── Cost: ~$0.40/month
 ```
 
-**Total Required Cost**: ~$1.40/month
+**Total Required Cost**: ~$1.00/month
+
+### **✅ Credential Storage Architecture**
+```
+DynamoDB + KMS (Free Tier Compliant)
+├── Table: dev-safemate-wallet-keys
+├── Item: user_id = "hedera_operator"
+├── Fields: account_id, encrypted_private_key
+├── Encryption: KMS key (3b18b0c0-dd1f-41db-8bac-6ec857c1ed05)
+└── Cost: $0.00 (DynamoDB) + $1.00 (KMS)
+```
 
 ## 🚫 Removed Expensive Components
 
@@ -162,7 +169,7 @@ Cognito User Pool → JWT Tokens → API Gateway → Lambda Functions
 
 ### **Data Encryption**
 ```
-KMS Keys → DynamoDB Encryption → S3 Encryption → Secrets Manager
+KMS Keys → DynamoDB Encryption → S3 Encryption → Hedera Credentials
 ```
 
 ### **Network Security**

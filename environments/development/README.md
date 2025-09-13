@@ -8,12 +8,13 @@ The SafeMate development environment is designed for local development and testi
 
 ### **📊 Configuration Summary**
 - **Environment Name**: `dev`
-- **AWS Region**: `us-east-1`
+- **AWS Region**: `ap-southeast-2`
 - **Hedera Network**: `testnet`
 - **Debug Mode**: ✅ Enabled
 - **Demo Mode**: ✅ Enabled
-- **Cost Profile**: Free Tier (~$1.40/month)
+- **Cost Profile**: Free Tier (~$1.00/month)
 - **Deployment Method**: Manual via PowerShell scripts
+- **Status**: ✅ **ACTIVE & FREE TIER COMPLIANT**
 
 ### **🔧 Key Features**
 - **Local Development Server**: http://localhost:5173/
@@ -129,23 +130,44 @@ The `deploy-dev.ps1` script performs the following steps:
 4. Applies the infrastructure changes
 5. Displays deployment outputs and URLs
 
-### **Deployment Outputs**
-After successful deployment, you'll see:
-- **Onboarding API URL**: `https://kbfs45jmnk.execute-api.ap-southeast-2.amazonaws.com/dev`
-- **Vault API URL**: `https://73r0aby0k4.execute-api.ap-southeast-2.amazonaws.com/dev`
-- **Wallet API URL**: `https://8k2qwmk56d.execute-api.ap-southeast-2.amazonaws.com/dev`
-- **Hedera API URL**: `https://vevhttzt1d.execute-api.ap-southeast-2.amazonaws.com/dev`
-- **Group API URL**: `https://f0v9l8afc0.execute-api.ap-southeast-2.amazonaws.com/dev`
-- **Cognito User Pool ID**: `ap-southeast-2_bUngJqSfu`
+### **Current Deployment Status (September 2025)**
+**✅ ACTIVE DEVELOPMENT ENVIRONMENT:**
+- **Onboarding API**: `https://527ye7o1j0.execute-api.ap-southeast-2.amazonaws.com/dev`
+- **Vault API**: `https://73r0aby0k4.execute-api.ap-southeast-2.amazonaws.com/dev`
+- **Wallet API**: `https://8k2qwmk56d.execute-api.ap-southeast-2.amazonaws.com/dev`
+- **Hedera API**: `https://vevhttzt1d.execute-api.ap-southeast-2.amazonaws.com/dev`
+- **Group API**: `https://f0v9l8afc0.execute-api.ap-southeast-2.amazonaws.com/dev`
+- **Directory API**: `https://2t47b74qul.execute-api.ap-southeast-2.amazonaws.com/dev`
+- **Email Verification API**: `https://x3qlwocgza.execute-api.ap-southeast-2.amazonaws.com/dev`
+
+**✅ AUTHENTICATION:**
+- **Cognito User Pool ID**: `ap-southeast-2_2fMWFFs8i` (dev)
 - **Cognito Client ID**: `67vhj24nj2b0rrtvhppevv9its`
 - **Cognito Domain**: `dev-safemate-auth-7h6ewch5`
-- **S3 Bucket**: `dev-safemate-static-hosting`
-- **CloudFront URL**: `https://d2lmqwi5ye891h.cloudfront.net`
+
+**✅ STORAGE:**
+- **DynamoDB Tables**: 15+ tables (all free tier compliant)
+- **S3 Buckets**: Static hosting and asset storage
+- **Credential Storage**: DynamoDB + KMS (no Secrets Manager)
 
 ### **Pre-Production Configuration**
-For pre-production environment (https://d19a5c2wn4mtdt.cloudfront.net/):
+**✅ ACTIVE PRE-PRODUCTION ENVIRONMENT:**
+- **Frontend URL**: `https://d1f6ux6bexgm7o.cloudfront.net`
+- **Onboarding API**: `https://ogxunodkn1.execute-api.ap-southeast-2.amazonaws.com/preprod`
+- **Vault API**: `https://062uk9bkqc.execute-api.ap-southeast-2.amazonaws.com/preprod`
+- **Wallet API**: `https://9t9hk461kh.execute-api.ap-southeast-2.amazonaws.com/preprod`
+- **Hedera API**: `https://1yais7r0mh.execute-api.ap-southeast-2.amazonaws.com/preprod`
+- **Group API**: `https://3r08ehzgk1.execute-api.ap-southeast-2.amazonaws.com/preprod`
+- **Directory API**: `https://e3k7nfvzab.execute-api.ap-southeast-2.amazonaws.com/preprod`
+
+**✅ AUTHENTICATION:**
 - **Cognito User Pool ID**: `ap-southeast-2_pMo5BXFiM`
 - **Cognito Client ID**: `1a0trpjfgv54odl9csqlcbkuii`
+- **Cognito Domain**: `preprod-safemate-auth-wmacwrsy`
+
+**✅ STATUS:**
+- **Cost**: Free Tier Compliant (~$1.00/month)
+- **CloudFront**: 1 active distribution (3 disabled for cost savings)
 - **Environment File**: Use `.env.preprod` for pre-production builds
 
 ## 🧪 **Testing Procedures**
